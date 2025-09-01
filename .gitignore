@@ -1,6 +1,8 @@
 # Ignora dependencias
 .venv/
 venv/
+.env/
+env/
 
 # Ignora configuración del IDE
 .vscode/

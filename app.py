@@ -1,18 +1,27 @@
 import customtkinter as ckt
+from PIL import Image
 
 class App(ckt.CTk):
     def __init__(self):
         super().__init__()
-        self.geometry("600x500")
+        screenWidth = self.winfo_screenwidth()
+        screenHeight = self.winfo_screenheight()
+        self.geometry(f"{screenWidth}x{screenHeight}+0+0")
         self.title("CTk example")
 
+    
         # add widgets to app
-        self.button = ckt.CTkButton(self, command=self.button_click)
-        self.button.grid(row=0, column=0, padx=20, pady=10)
+        frame = ckt.CTkFrame(self, fg_color="blue")
+        frame.pack(side="top",fill="x")
 
-    # add methods to app
-    def button_click(self):
-        print("button click")
+        my_image = ckt.CTkImage(light_image=Image.open("images\TechResourcesBanner.webp"), size=(70,70))
+
+        label1 = ckt.CTkLabel(frame, image=my_image, text="")
+        label1.grid(row=0, column=0)
+        
+        
+        frame2 = ckt.CTkFrame(self, fg_color="red",corner_radius=0)
+        frame2.pack(expand=True, fill = "both")
 
 
 app = App()
