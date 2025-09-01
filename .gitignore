@@ -1,0 +1,14 @@
+# Ignora dependencias
+.venv/
+venv/
+
+# Ignora configuración del IDE
+.vscode/
+
+# Ignora archivos temporales de python
+.mypy_cache/
+__pycache__/
+
+# Ignora archivos de secretos
+secrets.json
+config.json
