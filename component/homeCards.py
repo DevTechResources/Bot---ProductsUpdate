@@ -9,7 +9,8 @@ class HomeCards(ctk.CTkFrame):
 
         # Añadir frames al grid 
         ctk.CTkFrame(self, fg_color="purple", corner_radius=0).grid(row=0, column=0, sticky='w'+'e'+'n'+'s')
-        Card(self).grid(row=0, column=1, sticky='w'+'e'+'n'+'s', padx=22)
+        #Right margin with padx using comma
+        Card(self).grid(row=0, column=1, sticky='w'+'e'+'n'+'s', padx=(0,22))
         ctk.CTkFrame(self, fg_color="purple", corner_radius=0).grid(row=0, column=2, sticky='w'+'e'+'n'+'s')
         ctk.CTkFrame(self, fg_color="purple", corner_radius=0).grid(row=0, column=3, sticky='w'+'e'+'n'+'s')
         
