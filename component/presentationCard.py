@@ -3,9 +3,7 @@ from PIL import Image
 
 class PresentationCard(ctk.CTkFrame):
     def __init__(self, master):
-        super().__init__(master)
-
-        self.configure(fg_color="transparent")
+        super().__init__(master, fg_color="transparent")
 
         # Añadir elementos a la card
         icon = ctk.CTkImage(light_image=Image.open("images/robot.png"), size=(80, 80))

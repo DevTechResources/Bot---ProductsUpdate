@@ -1,7 +1,8 @@
 import tkinter as tk
+import customtkinter as ctk
 from PIL import Image
 from component.titleBar import TitleBar
-from pages.homePage import HomePage
+from controller.pagesController import PagesController
 
 class App(tk.Tk):
     def __init__(self):
@@ -19,8 +20,14 @@ class App(tk.Tk):
         frame1.pack(side="top",fill="x")
 
         #Frame for the HomePage
-        frame2 = HomePage(self)
+        frame2 = ctk.CTkFrame(self, fg_color="pink")
         frame2.pack(expand=True, fill = "both")
+        
+
+        #Create the pageController
+        controller = PagesController()
+        controller.establishPageContainer(frame2)
+
 
 app = App()
 app.mainloop()
