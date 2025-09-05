@@ -1,7 +1,6 @@
 import customtkinter as ctk
 import style.colors as colors
 from PIL import Image
-from controller.pagesController import PagesController
 
 class TitleBar(ctk.CTkFrame):
     def __init__(self, master):
@@ -14,5 +13,5 @@ class TitleBar(ctk.CTkFrame):
         companyLogoLabel = ctk.CTkLabel(self, image=companyLogo, text="")
         companyLogoLabel.pack(fill="x", expand=True, ipady=15)
 
-        controller = PagesController()
-        ctk.CTkButton(self, text="Ir", command=lambda: controller.show_frame("UploadPage")).pack()
+        #controller = PagesController()
+        #ctk.CTkButton(self, text="Ir", command=lambda: controller.show_frame("UploadPage")).pack()

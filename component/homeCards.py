@@ -16,7 +16,7 @@ class HomeCards(ctk.CTkFrame):
             "Modificar las categorías de"
             "\n“Nuevo Stock”, “Liquidacion” y"
             "\n“OpenBox” de productos en\ntienda.",
-            "compras"
+            "UploadPage"
             ).grid(row=0, column=1, sticky='w'+'e'+'n'+'s', padx=(0,17))
 
         Card(

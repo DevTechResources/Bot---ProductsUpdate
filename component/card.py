@@ -1,15 +1,14 @@
 import customtkinter as ctk
 import style.colors as colors
 from PIL import Image
-import pywinstyles
 from component.customCTkButton import CustomCTkButton
 
 class Card(ctk.CTkFrame):
-    def __init__(self, master, iconImage, title, description, destino):
+    def __init__(self, master, iconImage, title, description, destiny):
         super().__init__(master, fg_color="transparent")
 
-        frameSombra = ctk.CTkFrame(self, border_width=0, fg_color='#d1cfcf', corner_radius=28)
-        frameSombra.grid(row=0, column=0, sticky='n'+'s'+'w'+'e')
+        frameShadow = ctk.CTkFrame(self, border_width=0, fg_color='#d1cfcf', corner_radius=28)
+        frameShadow.grid(row=0, column=0, sticky='n'+'s'+'w'+'e')
         
         frameTarjeta = ctk.CTkFrame(self, fg_color="white", border_width=2, border_color="#7B7B7B", corner_radius=15)
         frameTarjeta.grid(row=0, column=0, sticky='n'+'s'+'w'+'e', pady=(0,5), padx=(0,5))
@@ -41,14 +40,17 @@ class Card(ctk.CTkFrame):
         frameButton = ctk.CTkFrame(frameTarjeta, fg_color="transparent")
         
         ##Crear los componentes para el frame del botón
+        from controller.pagesController import PagesController
+        controller = PagesController()
         CustomCTkButton(frameButton,
             image=iconButton,
             text="",
             height=60,
             width=60,
             corner_radius = 15,
-            fg_color=colors.CompanyColor1Variant1,
-            hover_color=colors.CompanyColor1Variant2
+            fg_color=colors.CompanyColor1,
+            hover_color=colors.CompanyColor1Variant1,
+            command=lambda: controller.show_frame(destiny)
             ).grid(row=0,column=0)
 
         ##Configurar la posicion del frame del botón respecto a la card

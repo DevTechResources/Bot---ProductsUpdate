@@ -8,7 +8,7 @@ class PresentationCard(ctk.CTkFrame):
         # Añadir elementos a la card
         icon = ctk.CTkImage(light_image=Image.open("images/robot.png"), size=(80, 80))
 
-        ctk.CTkLabel(self, image= icon, text="").grid(row=0, column=0) 
+        ctk.CTkLabel(self, image= icon, text="").grid(row=0, column=0)
         ctk.CTkLabel(self,
             text="Bot de actualización de productos",
             text_color="black",

@@ -19,10 +19,8 @@ class PagesController(metaclass=SingletonMeta):
         self.container.grid_columnconfigure(0, weight=1, uniform="Silent_Creme")
 
         self.show_frame("HomePage")
-        print(self.frames)
 
     def show_frame(self, page_name):
         '''Show a frame for the given page name'''
         frame = self.frames[page_name]
-        print(frame)
         frame.lift()

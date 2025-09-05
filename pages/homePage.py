@@ -13,5 +13,5 @@ class HomePage(ctk.CTkFrame):
         PresentationCard(self).pack(side="top",fill="x", pady=(30,22))
 
         #Añadir frame donde salen las tarjetas
-        HomeCards(self).pack(expand=True, fill = "both", pady=(22,30))
+        HomeCards(self).pack(expand=True, fill = "both", pady=(22,25))
         
